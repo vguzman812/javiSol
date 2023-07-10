@@ -764,4 +764,32 @@
 
 					});
 
+		// Populate gallery with random images. Assumes 45 images available
+		$('.gallery a, .gallery img').each(function() {
+			var randomNumber = Math.floor(Math.random() * 45) + 1; // Generates a random number from 1 to 45
+			var newHref = '../images/img' + randomNumber + '.jpg'; // Constructs the new href
+			
+			$(this).attr('href', newHref); // Sets the new href to the a tag
+        	$(this).children('img').attr('src', newHref); // Sets the img src to match the a tag's href
+		});
+
+	// Change section arrows from right to down at small breakpoint
+		function checkBreakpoint() {
+			// matchMedia for medium size
+			if(window.matchMedia("(max-width: 736px)").matches) {
+				$('.actions a').removeClass('fa-angle-right').addClass('fa-angle-down');
+			} else {
+				$('.actions a').removeClass('fa-angle-down').addClass('fa-angle-right');
+			}
+		}
+
+		// Initial call
+		checkBreakpoint();
+
+		// Call the function every time the window is resized
+		$(window).resize(function(){
+			checkBreakpoint();
+		});
+
+
 })(jQuery);

@@ -8,6 +8,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+		
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -26,7 +27,7 @@
 									</ul>
 								</div>
 								<div class="image filtered span-1-75" data-position="25% 25%">
-									<img src="../images/img3.jpg" alt="" />
+									<img src="../images/img3.jpg" alt="A beautiful image of coral" />
 								</div>
 							</section>
 
@@ -40,36 +41,39 @@
 									</ul>
 								</div>
 								<div class="image filtered tinted" data-position="top">
-									<img src="../images/img4.jpg" alt="" />
+									<img src="../images/img4.jpg" alt="A beautiful image of coral" />
 								</div>
 							</section>
 							
 
-						<!-- Panel with Gallery-->
+						<!-- Gallery Panel -->
 							<section class="panel" id="second">
-								<div class="intro color4-alt">
+								<div class="intro color2">
 									<h2 class="major">My Work</h2>
 									<p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam.</p>
+									<ul class="actions">
+										<li><a href="#third" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
+									</ul>
 								</div>
 								<div class="gallery">
 									<div class="group span-3">
-										<a href="../images/img1.jpg" class="image filtered span-3" data-position="bottom"><img src="../images/img1.jpg" alt="" /></a>
-										<a href="../images/img2.jpg" class="image filtered span-1-5" data-position="center"><img src="../images/img2.jpg" alt="" /></a>
-										<a href="../images/img5.jpg" class="image filtered span-1-5" data-position="bottom"><img src="../images/img5.jpg" alt="" /></a>
+										<a href="../images/img1.jpg" class="image filtered span-3" data-position="center"><img src="../images/img1.jpg" alt="A beautiful image of coral" /></a>
+										<a href="../images/img2.jpg" class="image filtered span-1-5" data-position="center"><img src="../images/img2.jpg" alt="A beautiful image of coral" /></a>
+										<a href="../images/img5.jpg" class="image filtered span-1-5" data-position="center"><img src="../images/img5.jpg" alt="A beautiful image of coral" /></a>
 									</div>
-									<a href="../images/img11.jpg" class="image filtered span-2-5" data-position="top"><img src="../images/img11.jpg" alt="" /></a>
+									<a href="../images/img11.jpg" class="image filtered span-2-5" data-position="center"><img src="../images/img11.jpg" alt="A beautiful image of coral" /></a>
 									<div class="group span-4-5">
-										<a href="../images/img6.jpg" class="image filtered span-3" data-position="top"><img src="../images/img6.jpg" alt="" /></a>
-										<a href="../images/img7.jpg" class="image filtered span-1-5" data-position="center"><img src="../images/img7.jpg" alt="" /></a>
-										<a href="../images/img8.jpg" class="image filtered span-1-5" data-position="bottom"><img src="../images/img8.jpg" alt="" /></a>
-										<a href="../images/img9.jpg" class="image filtered span-3" data-position="top"><img src="../images/img9.jpg" alt="" /></a>
+										<a href="../images/img6.jpg" class="image filtered span-3" data-position="center"><img src="../images/img6.jpg" alt="A beautiful image of coral" /></a>
+										<a href="../images/img7.jpg" class="image filtered span-1-5" data-position="center"><img src="../images/img7.jpg" alt="A beautiful image of coral" /></a>
+										<a href="../images/img8.jpg" class="image filtered span-1-5" data-position="center"><img src="../images/img8.jpg" alt="A beautiful image of coral" /></a>
+										<a href="../images/img9.jpg" class="image filtered span-3" data-position="center"><img src="../images/img9.jpg" alt="A beautiful image of coral" /></a>
 									</div>
-									<a href="../images/img10.jpg" class="image filtered span-2-5" data-position="right"><img src="../images/img10.jpg" alt="" /></a>
+									<a href="../images/img10.jpg" class="image filtered span-2-5" data-position="center"><img src="../images/img10.jpg" alt="A beautiful image of coral" /></a>
 								</div>
 							</section>
 
-						<!-- Panel -->
-							<section class="panel color4">
+						<!-- Contact Panel -->
+							<section class="panel color2-alt" id="third">
 								<div class="intro">
 									<h2 class="major">Contact Me</h2>
 									<p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam.</p>
@@ -80,20 +84,21 @@
 								</div>
 								<div class="inner columns divided">
 									<div class="span-3-25">
-										<form method="post" action="#">
+										  <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xyyapzpw" method="post">
 											<div class="fields">
 												<div class="field half">
 													<label for="name">Name</label>
-													<input type="text" name="name" id="name" />
+													<input type="text" name="name" id="name" placeholder="First and Last" required="">
 												</div>
 												<div class="field half">
 													<label for="email">Email</label>
-													<input type="email" name="email" id="email" />
+													<input type="email" name="email" id="email" placeholder="email@domain.tld" required="">
 												</div>
 												<div class="field">
 													<label for="message">Message</label>
 													<textarea name="message" id="message" rows="4"></textarea>
 												</div>
+												<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
 											</div>
 											<ul class="actions">
 												<li><input type="submit" value="Send Message" class="button primary" /></li>
@@ -104,7 +109,7 @@
 							</section>
 
 						<!-- Panel -->
-							<section class="panel color2-alt">
+							<section class="panel color4">
 								<div class="inner">
 									<div class="span-3">
 										<h3 class="major">Print Costs (Not including S&H)</h3>
