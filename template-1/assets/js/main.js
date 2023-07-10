@@ -80,12 +80,9 @@
 			xshort:   '(min-aspect-ratio: 16/6)'
 		});
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+	
+
+
 
 	// Tweaks/fixes.
 
@@ -764,6 +761,8 @@
 
 					});
 
+	// Custom JS
+
 		// Populate gallery with random images. Assumes 45 images available
 		$('.gallery a, .gallery img').each(function() {
 			var randomNumber = Math.floor(Math.random() * 45) + 1; // Generates a random number from 1 to 45
@@ -773,11 +772,55 @@
         	$(this).children('img').attr('src', newHref); // Sets the img src to match the a tag's href
 		});
 
-	// Change section arrows from right to down at small breakpoint
+	// Cover page functionality
+		function revealPage() {
+			let button = $("#diveButton");
+			let cover = $("#cover");
+		
+			// Play initial animations
+			window.setTimeout(function() {
+				$body.removeClass('is-preload');
+			}, 100);
+
+			// hide button text
+			button.text("");
+		
+			// minimize button
+			setTimeout(function() {
+				button.addClass('hide');
+			}, 100);
+		
+			// fade out cover
+			setTimeout(function() {
+				cover.addClass('hide');
+			}, 100);		
+		}
+		
+		// Add click event listener to dive button
+		$('#diveButton').on("click", revealPage)
+		
+		$('#cover').ripples({
+			resolution: 500,
+			dropRadius: 10,
+			perturbance: 0.01,
+		});
+
+	// Change section arrows from right to down at med breakpoint, Remove cover
 		function checkBreakpoint() {
 			// matchMedia for medium size
 			if(window.matchMedia("(max-width: 736px)").matches) {
 				$('.actions a').removeClass('fa-angle-right').addClass('fa-angle-down');
+				$("#diveButton").remove();
+				$('#cover').remove();
+				// Play initial animations
+				$window.on('load', function() {
+					window.setTimeout(function() {
+						$body.removeClass('is-preload');
+					}, 100);
+				});
+				window.setTimeout(function() {
+					$body.removeClass('is-preload');
+				}, 100);
 			} else {
 				$('.actions a').removeClass('fa-angle-down').addClass('fa-angle-right');
 			}
@@ -790,6 +833,7 @@
 		$(window).resize(function(){
 			checkBreakpoint();
 		});
+	
 
 
 })(jQuery);
