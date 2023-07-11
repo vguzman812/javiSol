@@ -2293,7 +2293,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("/images/img35.jpg");
+		background: url("../images/img35.jpg");
 		background-size: cover;
 		background-attachment: fixed, fixed;
 		background-position: center;
@@ -2303,7 +2303,7 @@ input, select, textarea {
 /* One */
 
 	#one {
-		background: url("/template-2//images/gradient4.png");
+		background: url("../images/gradient4.png");
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: center ;
@@ -2312,7 +2312,7 @@ input, select, textarea {
 /* Two */
 
 	#two {
-		background: url("/images/img17.jpg");
+		background: url("../images/img17.jpg");
 		background-size: cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2322,7 +2322,7 @@ input, select, textarea {
 /* Prints */
 
 	#prints {
-		background: url("/template-2/images/gradient1.png");
+		background: url("../images/gradient1.png");
 		background-size:cover;
 
 	}
@@ -2330,7 +2330,7 @@ input, select, textarea {
 /* Work */
 
 	#work {
-		background-image: url("/template-2/images/gradient2.png");
+		background-image: url("../images/gradient2.png");
 		background-size:cover;
 	}
 /* Contact */

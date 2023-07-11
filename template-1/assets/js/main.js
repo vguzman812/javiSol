@@ -776,7 +776,7 @@
 			
 			assignedNumbers.push(randomNumber); // Add the assigned number to the array
 			
-			var newHref = '../images/img' + randomNumber + '.jpg';
+			var newHref = './assets/images/img' + randomNumber + '.jpg';
 			
 			$(this).attr('href', newHref);
 			$(this).children('img').attr('src', newHref);
