@@ -186,7 +186,7 @@
 			.on('resize', function() {
 
 				// Disable animations/transitions.
-					$body.addClass('is-resizing');
+				$body.addClass('is-resizing');
 
 				clearTimeout(resizeTimeout);
 
@@ -211,4 +211,25 @@
 				$window.trigger('resize');
 			});
 
+	// Custom JS
+
+		// Populate gallery with new images. Assumes 45 images available
+		var assignedNumbers = []; // Array to store assigned numbers
+
+		$('.gallery a, .gallery img').each(function() {
+			var randomNumber;
+			
+			// Generate a unique random number
+			do {
+				randomNumber = Math.floor(Math.random() * 45) + 1;
+			} while (assignedNumbers.includes(randomNumber));
+			
+			assignedNumbers.push(randomNumber); // Add the assigned number to the array
+			
+			var newHref = '../images/img' + randomNumber + '.jpg';
+			
+			$(this).attr('href', newHref);
+			$(this).children('img').attr('src', newHref);
+		});
+	
 })(jQuery);

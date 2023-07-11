@@ -966,6 +966,8 @@ input, select, textarea {
 		.image img {
 			display: block;
 			width: 100%;
+			height:auto;
+			object-fit:contain;
 		}
 
 		.image.featured {
@@ -1418,14 +1420,65 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		width: 45em;
-		max-width: 100%;
-		margin: 0 auto 2em auto;
+		padding: 2px;
+		transition: 0.3s;
 	}
+
+	.gallery:hover .gallery__image {
+		filter: grayscale(1);
+	}
+
+	.gallery article {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		width: 25%;
+	}
+
+	.gallery__link {
+		margin: 2px;
+		overflow: hidden;
+		position:relative;
+	}
+	
+	.gallery__link:hover .gallery__image {
+		filter: grayscale(0);
+	}
+
+	.gallery__link:hover .gallery__caption {
+		opacity: 1;
+	}
+
+
+	.gallery__image {
+		display: block;
+		width: 100%;
+		transition: 0.3s;
+	}
+
+	.gallery__image:hover {
+		transform: scale(1.1);
+	}
+
+	.gallery__caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 25px 15px 15px;
+		width: 100%;
+		font-family: 'Raleway', sans-serif;
+		font-size: 16px;
+		color: white;
+		opacity: 0;
+		background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+		transition: 0.3s;
+	}
+
 
 		.gallery article {
 			-moz-transition: -moz-transform 1s ease, opacity 1s ease;
@@ -1436,9 +1489,10 @@ input, select, textarea {
 			-webkit-transform: translateX(0);
 			-ms-transform: translateX(0);
 			transform: translateX(0);
-			width: 50%;
+			/* width: 50%; */
 			position: relative;
 			opacity: 1.0;
+			/* max-height:20%; */
 		}
 
 			.gallery article .image {
@@ -1800,7 +1854,7 @@ input, select, textarea {
 				transform: translateY(7em);
 			}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 768px) {
 
 			.gallery {
 				-moz-flex-wrap: nowrap;
@@ -1827,7 +1881,7 @@ input, select, textarea {
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: rgba(255, 255, 255, 0.95);
+		background: rgba(255, 255, 255, 0.85);
 		height: 3em;
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
@@ -2042,7 +2096,7 @@ input, select, textarea {
 			}
 
 			.main.style3.secondary {
-				background: #f5f6f7;
+				background: #f1f2f3;
 			}
 
 		.main.dark {
@@ -2239,36 +2293,52 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
-		background-size: 256px 256px, cover;
+		background: url("/images/img35.jpg");
+		background-size: cover;
 		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
+		background-position: center;
 		background-repeat: repeat, no-repeat;
 	}
 
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("../../images/one.jpg");
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
+		background: url("/template-2//images/gradient4.png");
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center ;
 	}
 
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/two.jpg");
-		background-size: 256px 256px, cover;
+		background: url("/images/img17.jpg");
+		background-size: cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
 
+
+/* Prints */
+
+	#prints {
+		background: url("/template-2/images/gradient1.png");
+		background-size:cover;
+
+	}
+
+/* Work */
+
+	#work {
+		background-image: url("/template-2/images/gradient2.png");
+		background-size:cover;
+	}
 /* Contact */
 
 	#contact {
 		overflow: hidden;
 		padding-bottom: 0;
+		padding-top:2em;
 	}
 
 		#contact .box {

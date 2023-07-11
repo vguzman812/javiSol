@@ -763,13 +763,23 @@
 
 	// Custom JS
 
-		// Populate gallery with random images. Assumes 45 images available
+		// Populate gallery with new images. Assumes 45 images available
+		var assignedNumbers = []; // Array to store assigned numbers
+
 		$('.gallery a, .gallery img').each(function() {
-			var randomNumber = Math.floor(Math.random() * 45) + 1; // Generates a random number from 1 to 45
-			var newHref = '../images/img' + randomNumber + '.jpg'; // Constructs the new href
+			var randomNumber;
 			
-			$(this).attr('href', newHref); // Sets the new href to the a tag
-        	$(this).children('img').attr('src', newHref); // Sets the img src to match the a tag's href
+			// Generate a unique random number
+			do {
+				randomNumber = Math.floor(Math.random() * 45) + 1;
+			} while (assignedNumbers.includes(randomNumber));
+			
+			assignedNumbers.push(randomNumber); // Add the assigned number to the array
+			
+			var newHref = '../images/img' + randomNumber + '.jpg';
+			
+			$(this).attr('href', newHref);
+			$(this).children('img').attr('src', newHref);
 		});
 
 	// Cover page functionality
@@ -793,7 +803,11 @@
 			// fade out cover
 			setTimeout(function() {
 				cover.addClass('hide');
-			}, 100);		
+			}, 100);
+
+			// remove button and cover
+			button.remove();
+			cover.remove();
 		}
 		
 		// Add click event listener to dive button
