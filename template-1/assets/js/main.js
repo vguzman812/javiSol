@@ -805,9 +805,13 @@
 				cover.addClass('hide');
 			}, 100);
 
-			// remove button and cover
-			button.remove();
-			cover.remove();
+			// remove button and cover. timeout it set to same time as css transition
+			setTimeout(function() {
+				button.remove();
+				cover.remove();
+			}, 3000);
+			
+			
 		}
 		
 		// Add click event listener to dive button
@@ -815,7 +819,7 @@
 		
 		$('#cover').ripples({
 			resolution: 500,
-			dropRadius: 10,
+			dropRadius: 20,
 			perturbance: 0.01,
 		});
 

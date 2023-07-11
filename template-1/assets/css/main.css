@@ -3689,7 +3689,7 @@ input, select, textarea {
 .cover {
 	position: fixed;
 	z-index:1;
-	background-image:url("/images/img35.jpg");
+	background-image:url("../images/img37.jpg");
 	background-position:center;
 	background-size:cover;
 	width: 100%;
