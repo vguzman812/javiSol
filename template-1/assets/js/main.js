@@ -818,9 +818,9 @@
 		$('#diveButton').on("click", revealPage)
 		
 		$('#cover').ripples({
-			resolution: 500,
-			dropRadius: 20,
-			perturbance: 0.01,
+			resolution: 1000,
+			dropRadius: 80,
+			perturbance: .05,
 		});
 
 	// Change section arrows from right to down at med breakpoint, Remove cover
