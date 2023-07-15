@@ -1590,6 +1590,25 @@ input, select, textarea {
 				font-size: 1.75rem;
 			}
 
+			input[type="submit"].icon.circle.fa-envelope:before,
+			input[type="reset"].icon.circle.fa-envelope:before,
+			input[type="button"].icon.circle.fa-envelope:before,
+			button.icon.circle.fa-envelope:before,
+			.button.icon.circle.fa-envelope:before {
+				position: relative;
+				left: 0;
+				font-size: 1.75rem;
+			}
+			input[type="submit"].icon.circle.fa-sync-alt:before,
+			input[type="reset"].icon.circle.fa-sync-alt:before,
+			input[type="button"].icon.circle.fa-sync-alt:before,
+			button.icon.circle.fa-sync-alt:before,
+			.button.icon.circle.fa-sync-alt:before {
+				position: relative;
+				left: 0;
+				font-size: 1.75rem;
+			}
+
 		input[type="submit"].fit,
 		input[type="reset"].fit,
 		input[type="button"].fit,

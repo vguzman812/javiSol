@@ -765,8 +765,10 @@
 
 		// Populate gallery with new images. Assumes 45 images available
 		var assignedNumbers = []; // Array to store assigned numbers
+		
+		function refreshGallery() {
 
-		$('.gallery a, .gallery img').each(function() {
+
 			var randomNumber;
 			
 			// Generate a unique random number
@@ -780,6 +782,17 @@
 			
 			$(this).attr('href', newHref);
 			$(this).children('img').attr('src', newHref);
+		}
+
+		// Initial gallery call on page load
+		$('.gallery a, .gallery img').each(refreshGallery);
+		// Clear assignedNumbers after first gallery load
+		assignedNumbers = []
+
+		// Gallery call on refresh click
+		$("#refresh").on('click', () =>{
+			$('.gallery a, .gallery img').each(refreshGallery);
+			assignedNumbers = []
 		});
 
 	// Cover page functionality
@@ -818,9 +831,9 @@
 		$('#diveButton').on("click", revealPage)
 		
 		$('#cover').ripples({
-			resolution: 1000,
-			dropRadius: 80,
-			perturbance: .05,
+			resolution: 500,
+			dropRadius: 20,
+			perturbance: .03,
 		});
 
 	// Change section arrows from right to down at med breakpoint, Remove cover
