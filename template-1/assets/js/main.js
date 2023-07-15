@@ -833,7 +833,7 @@
 		$('#cover').ripples({
 			resolution: 500,
 			dropRadius: 20,
-			perturbance: .03,
+			perturbance: .015,
 		});
 
 	// Change section arrows from right to down at med breakpoint, Remove cover
