@@ -833,7 +833,7 @@
 		$('#cover').ripples({
 			resolution: 500,
 			dropRadius: 20,
-			perturbance: .015,
+			perturbance: .01,
 		});
 
 	// Change section arrows from right to down at med breakpoint, Remove cover
@@ -841,6 +841,7 @@
 			// matchMedia for medium size
 			if(window.matchMedia("(max-width: 736px)").matches) {
 				$('.actions a').removeClass('fa-angle-right').addClass('fa-angle-down');
+				
 				$("#diveButton").remove();
 				$('#cover').remove();
 				// Play initial animations
