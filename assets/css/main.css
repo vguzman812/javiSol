@@ -211,7 +211,7 @@ input, select, textarea {
 			z-index: -1;
 			background-attachment: fixed;
 			background-color: #e1e6e1;
-			background-image: url("/assets/images/overlay.png"), url("/assets/images/bg.jpg");
+			background-image: url("/assets/images/overlay.png"), linear-gradient(45deg, rgb(23, 33, 93),rgb(181, 240, 237));
 			background-repeat: repeat, repeat-x;
 			background-size: 128px 128px, cover;
 		}
